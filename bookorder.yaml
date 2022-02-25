@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookorder
+spec:
+  selector:
+    matchLabels:
+      app: bookorder
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bookorder
+    spec:
+      containers:
+      - name: bookorder
+        image: DeekshaSh/bookorder
+ 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookorder
+spec:
+  type: NodePort
+  selector:
+    app: bookorder
+  ports:
+  - port: 80
+    targetPort: 9001
+    nodePort: 31000

@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookcatalog
+spec:
+  selector:
+    matchLabels:
+      app: bookcatalog
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: bookcatalog
+    spec:
+      containers:
+      - name: bookcatalog
+        image: DeekshaSh/bookcatalog
+ 
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookcatalog
+spec:
+  type: NodePort
+  selector:
+    app: bookcatalog
+  ports:
+  - port: 80
+    targetPort: 8080
+    nodePort: 31000
