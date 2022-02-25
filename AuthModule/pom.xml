@@ -9,10 +9,10 @@
 		<version>2.6.3</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.web.ds.login</groupId>
-	<artifactId>bookstore</artifactId>
+	<groupId>com.web.ds.auth</groupId>
+	<artifactId>authmodule</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>LoginModule</name>
+	<name>AuthModule</name>
 	<description>BookStore App</description>
 	<properties>
 		<java.version>11</java.version>
