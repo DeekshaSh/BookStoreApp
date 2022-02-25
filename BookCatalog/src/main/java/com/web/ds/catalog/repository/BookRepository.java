@@ -12,7 +12,7 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BookRepository extends CrudRepository<BookDetails, String> {
 	
-	@Query("SELECT book FROM book_details book WHERE book.id = ?1")
-	Map<String, BookDetails> findBookById(String bookId);
+	//@Query("SELECT book FROM book_details book WHERE book.bookId = ?1")
+	BookDetails findBookBybookId(String bookId);
 	
 }

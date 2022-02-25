@@ -8,7 +8,7 @@ public interface BookCatalogService {
 
 	void getBookId(BookDetails bookDetails);
 	
-	Map<String, BookDetails> findBookById(String bookId); 
+	BookDetails findBookById(String bookId); 
 	
 	Boolean deleteBookById(String bookId);
 }

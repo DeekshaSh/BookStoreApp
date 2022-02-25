@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.web.ds.catalog</groupId>
-	<artifactId>bookstore</artifactId>
+	<artifactId>bookcatalog</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>BookCatalog</name>
 	<description>BookStore App</description>

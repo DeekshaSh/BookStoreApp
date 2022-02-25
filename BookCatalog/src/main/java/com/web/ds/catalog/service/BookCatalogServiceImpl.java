@@ -40,11 +40,11 @@ public class BookCatalogServiceImpl implements BookCatalogService {
 	}
 
 	@Override
-	public Map<String, BookDetails> findBookById(String bookId) {
+	public BookDetails findBookById(String bookId) {
 		
-		Map<String, BookDetails> bookDetailsMap = (Map<String, BookDetails>) bookRepository.findBookById(bookId);
+		BookDetails bookDetails = bookRepository.findBookBybookId(bookId);
 		
-		return bookDetailsMap;
+		return bookDetails;
 	}
 
 	@Override
